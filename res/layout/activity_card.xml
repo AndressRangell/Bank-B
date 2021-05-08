@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_dark">
+
+    <include
+        android:id="@+id/toolbar_id"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/flexo_bold"
+        android:textStyle="bold"
+        android:layout_below="@+id/toolbar_id"
+        android:layout_centerHorizontal="true"
+        android:text="@string/insert"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/flexo_bold"
+        android:layout_below="@id/title"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:text="@string/insertCard"/>
+
+    <LinearLayout
+        android:id="@+id/linearPrueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-380dp"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gifFlechas"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="15dp"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_fileName="check.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false"/>
+
+        <ImageButton
+            android:id="@+id/imgCard"
+            android:layout_width="280dp"
+            android:layout_height="380dp"
+            android:background="@drawable/bcp_card" />
+    </LinearLayout>
+</RelativeLayout>

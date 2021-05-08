@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pagoservicios"
+    app:startDestination="@id/fragmentTypePayment2">
+
+    <fragment
+        android:id="@+id/fragmentServiceSelector"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentServiceSelector"
+        android:label="fragment_service_selector"
+        tools:layout="@layout/fragment_service_selector" >
+        <action
+            android:id="@+id/action_fragmentServiceSelector_to_fragmentSearch2"
+            app:destination="@id/fragmentSearch" />
+        <action
+            android:id="@+id/action_fragmentServiceSelector_to_fragmentList2"
+            app:destination="@id/fragmentList" />
+        <action
+            android:id="@+id/action_fragmentServiceSelector_to_fragmentTypePayment2"
+            app:destination="@id/fragmentTypePayment2" />
+        <action
+            android:id="@+id/action_fragmentServiceSelector_to_navigationConRango"
+            app:destination="@id/navigationConRango" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentSearch"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_fragmentSearch_to_fragmentServiceSelector"
+            app:destination="@id/fragmentServiceSelector" />
+        <action
+            android:id="@+id/action_fragmentSearch_to_navigationConRango"
+            app:destination="@id/navigationConRango" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentList"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_fragmentList_to_fragmentServiceSelector"
+            app:destination="@id/fragmentServiceSelector" />
+        <action
+            android:id="@+id/action_fragmentList_to_navigationConRango"
+            app:destination="@id/navigationConRango" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTypePayment2"
+        android:name="com.bcp.transactions.giros.fragments.FragmentTypePayment"
+        android:label="fragment_tipo_pago"
+        tools:layout="@layout/fragment_tipo_pago" >
+        <action
+            android:id="@+id/action_fragmentTypePayment2_to_fragmentServiceSelector"
+            app:destination="@id/fragmentServiceSelector" />
+    </fragment>
+    <navigation android:id="@+id/navigationConRango"
+        app:startDestination="@id/fragmentTypeService2">
+        <fragment
+            android:id="@+id/fragmentTypeCoin2"
+            android:name="com.bcp.transactions.giros.fragments.FragmentTypeCoin"
+            android:label="fragment_type_coin"
+            tools:layout="@layout/fragment_type_coin" >
+            <action
+                android:id="@+id/action_fragmentTypeCoin2_to_fragmentDetailPaymentService2"
+                app:destination="@id/fragmentDetailPaymentService2" />
+            <action
+                android:id="@+id/action_fragmentTypeCoin2_to_fragmentTypeService2"
+                app:destination="@id/fragmentTypeService2" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentDetailPaymentService2"
+            android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDetailPaymentService"
+            android:label="fragment_detail_payment_service"
+            tools:layout="@layout/fragment_detail_payment_service" >
+            <action
+                android:id="@+id/action_fragmentDetailPaymentService2_to_fragmentTypeCoin2"
+                app:destination="@id/fragmentTypeCoin2" />
+            <action
+                android:id="@+id/action_fragmentDetailPaymentService2_to_fragmentDocumetClient2"
+                app:destination="@id/fragmentDocumetClient2" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentTypeService2"
+            android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentTypeService"
+            android:label="fragment_type_service"
+            tools:layout="@layout/fragment_type_service" >
+            <action
+                android:id="@+id/action_fragmentTypeService2_to_fragmentTypeCoin2"
+                app:destination="@id/fragmentTypeCoin2" />
+            <action
+                android:id="@+id/action_fragmentTypeService2_to_fragmentDetailPaymentService2"
+                app:destination="@id/fragmentDetailPaymentService2" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_fragmentServiceSelector2"
+            app:destination="@id/fragmentServiceSelector" />
+        <fragment
+            android:id="@+id/fragmentDocumetClient2"
+            android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDocumetClient"
+            android:label="fragment_documet_client"
+            tools:layout="@layout/fragment_documet_client" >
+            <action
+                android:id="@+id/action_fragmentDocumetClient2_to_fragmentDetailPaymentService2"
+                app:destination="@id/fragmentDetailPaymentService2" />
+        </fragment>
+    </navigation>
+</navigation>

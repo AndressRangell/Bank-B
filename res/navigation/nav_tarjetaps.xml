@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tarjetaps"
+    app:startDestination="@id/fragmentTypeAccount2">
+
+    <fragment
+        android:id="@+id/fragmentTypeAccount2"
+        android:name="com.bcp.transactions.giros.fragments.FragmentTypeAccount"
+        android:label="fragment_type_account"
+        tools:layout="@layout/fragment_type_account" >
+        <action
+            android:id="@+id/action_fragmentTypeAccount2_to_fragmentDetailPaymentService4"
+            app:destination="@id/fragmentDetailPaymentService4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailPaymentService4"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDetailPaymentService"
+        android:label="fragment_detail_payment_service"
+        tools:layout="@layout/fragment_detail_payment_service" >
+        <action
+            android:id="@+id/action_fragmentDetailPaymentService4_to_fragmentDocumetClient4"
+            app:destination="@id/fragmentDocumetClient4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDocumetClient4"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDocumetClient"
+        android:label="fragment_documet_client"
+        tools:layout="@layout/fragment_documet_client" />
+</navigation>

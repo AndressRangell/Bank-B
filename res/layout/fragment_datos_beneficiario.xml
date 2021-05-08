@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bcp.transactions.giros.fragments.FragmentBeneficiaryData"
+    android:id="@+id/fragmentDB">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:ignore="UselessParent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+
+        <LinearLayout
+            android:id="@+id/linearTipDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tip_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center|left"
+                android:text="Tipo de documento del beneficiario"
+                android:textColor="@color/color_text"
+                android:textSize="17sp"
+                tools:ignore="UselessParent">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/flexo_medium"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/textSpinnerdoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/btn_spinner_select"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/dp_10"
+                    android:hint="@string/OpcionDoc"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill,TextFields,UselessParent"/>
+
+                <TextView
+                    android:id="@+id/selectBeneficiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/zxing_transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/tipDocumt"
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDocument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearTipDoc"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/doc_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center|left"
+                android:text="Numero de Teléfono"
+                android:textColor="@color/color_text"
+                android:textSize="17sp"
+                tools:ignore="UselessParent">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/flexo_medium"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center">
+
+            <EditText
+                android:id="@+id/NumeroDocument"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:focusable="false"
+                android:fontFamily="@font/flexo_medium"
+                android:hint="@string/_14_digitos"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,TextFields,UselessParent"/>
+
+                <TextView
+                    android:id="@+id/numeroDni"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/zxing_transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearOrdenPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearDocument"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ordenPagoGiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center|left"
+                android:text="Orden de pago"
+                android:textColor="@color/color_text"
+                android:textSize="17sp"
+                tools:ignore="UselessParent">
+            </TextView>
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/flexo_medium"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/TxtSpinnerBen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/btn_spinner_select"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/dp_10"
+                    android:hint="@string/OpcionDoc"
+                    android:editable="false"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill,TextFields,UselessParent"/>
+
+                <TextView
+                    android:id="@+id/txtNomApellBenef"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/zxing_transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/selectBeneficiaryOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/zxing_transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/TipoOrdenGiro"
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/procesandoTransBen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_below="@+id/linearOrdenPago"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/gifProcesandoBen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:lottie_imageAssetsFolder="assets"
+                app:lottie_fileName="loader.json"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="false"/>
+
+            <TextView
+                android:id="@+id/msgTipoOpe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/flexo_bold"
+                android:text="Verificando..."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msgDNIerror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/flexo_medium"
+            android:text="@string/msgDocWrong"
+            android:layout_below="@id/linearDocument"
+            android:visibility="gone"
+            android:textColor="@color/color_red_contra_error2"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/Btncontinuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_estados_continuar"
+                android:fontFamily="@font/flexo_bold"
+                android:gravity="center"
+                android:text="@string/continuar"
+                android:enabled="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeTipoDocumet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80070707"
+        android:fontFamily="@font/flexo_medium"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded">
+
+        <LinearLayout
+            android:id="@+id/linearSpinnerDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_spinner"
+            android:fontFamily="@font/flexo_medium"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="1dp"
+            tools:ignore="RtlHardcoded">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeTipOrden"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80090909"
+        android:fontFamily="@font/flexo_medium"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded">
+
+        <LinearLayout
+            android:id="@+id/linearBotonesGiros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_spinner"
+            android:fontFamily="@font/flexo_medium"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="1dp"
+            tools:ignore="RtlHardcoded">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/keyboardNumerico"
+        layout="@layout/activity_keyboard"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/keyboardAlfa"
+        layout="@layout/teclado_alfanumerico"
+        android:visibility="gone"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/msgAccount"
+        layout="@layout/msg_account"
+        android:visibility="invisible" />
+</FrameLayout>

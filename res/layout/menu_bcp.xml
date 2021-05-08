@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/blue_dark"
+    android:layout_height="match_parent"
+    tools:context="com.bcp.menus.MenuBCP"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_dark">
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/flexo_medium"
+                android:text="@string/agente_buen_vecino"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/clickMoreOptions"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end">
+
+                <ImageButton
+                    android:id="@+id/moreoptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_more_vert_white_24dp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/clickClose"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_close_white_24dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearToolBar"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/flexo_bold"
+        android:textSize="16sp"
+        android:text="@string/selecOp"
+        android:textColor="@color/white"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp"
+            />
+
+    <RelativeLayout
+        android:id="@+id/menuOculto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:background="@drawable/fondo_timeout">
+
+            <Button
+                android:id="@+id/reporteDetallado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detailReport"
+                android:background="@drawable/btn_sombra2"
+                android:textColor="@drawable/btn_sombra"
+                android:textAllCaps="false"
+                android:outlineProvider="none"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/flexo_medium"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+            </Button>
+
+            <Button
+                android:id="@+id/cierretotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/totalClos"
+                android:background="@drawable/btn_sombra2"
+                android:textColor="@drawable/btn_sombra"
+                android:outlineProvider="none"
+                android:textAllCaps="false"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="left|center"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="20dp"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+            </Button>
+
+            <Button
+                android:id="@+id/ultimasoperaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_sombra2"
+                android:textColor="@drawable/btn_sombra"
+                android:outlineProvider="none"
+                android:fontFamily="@font/flexo_medium"
+                android:textAllCaps="false"
+                android:text="@string/lastOperation"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="20dp"
+                android:gravity="left|center"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+            </Button>
+
+            <Button
+                android:id="@+id/cambioclaveactual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_sombra2"
+                android:textColor="@drawable/btn_sombra"
+                android:fontFamily="@font/flexo_medium"
+                android:outlineProvider="none"
+                android:textAllCaps="false"
+                android:text="@string/changeKeyAct"
+                android:gravity="left|center"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="20dp"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+            </Button>
+
+            <ImageView
+                android:id="@+id/line_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/linea_gris"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:id="@+id/cierre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/endSesion"
+                android:fontFamily="@font/flexo_medium"
+                android:textSize="@dimen/sp_16"
+                android:outlineProvider="none"
+                android:textAllCaps="false"
+                android:gravity="left|center"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/btn_sombra2"
+                android:textColor="@drawable/btn_sombra"
+                tools:ignore="RtlHardcoded,RtlSymmetry">
+            </Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/msgAccount"
+        layout="@layout/msg_account"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

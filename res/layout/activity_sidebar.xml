@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarsidebar"
+        layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/country_lvcountry"
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:scrollbars="none"/>
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_baseline_label_24"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+
+            <com.siderbar.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="30dp"
+                android:layout_height="430dp"
+                android:layout_marginLeft="329dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/flexo_bold"
+                android:layout_gravity="right|center" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bcp.geolocalizacion.Geolocalizacion">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/material_blue_grey_800"/>
+
+        <TextView
+            android:id="@+id/titleTextNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/separator1"
+            android:text="@string/network"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/locationControllerNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/titleTextNetwork"
+            android:text="@string/resumen"
+            android:onClick="toggleNetworkUpdates"/>
+
+        <TextView
+            android:id="@+id/longitudeTextNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationControllerNetwork"
+            android:text="@string/longitud"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/longitudeValueNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationControllerNetwork"
+            android:layout_toRightOf="@id/longitudeTextNetwork"
+            android:paddingLeft="10dp"
+            android:text="0.0000"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/latitudeTextNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/longitudeTextNetwork"
+            android:text="@string/latitud"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/latitudeValueNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/longitudeValueNetwork"
+            android:layout_toRightOf="@id/longitudeTextNetwork"
+            android:paddingLeft="10dp"
+            android:text="0.0000"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/latitudeValueNetwork"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/material_blue_grey_800"/>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/distancia"/>
+
+            <TextView
+                android:id="@+id/distancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/linear"
+            android:onClick="calcularDistancia"
+            android:text="@string/calcular"
+            android:enabled="true"
+            android:textSize="20sp"/>
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/latitudeValueNetwork"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/material_blue_grey_800"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,537 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bcp.transactions.giros.fragments.FragmentDetailGiro">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollDG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="15dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_above="@id/toolbar_id"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/EditarBenGiro"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/ic_editar" />
+
+                    <LinearLayout
+                        android:id="@+id/linearDetallGiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/flexo_medium"
+                            android:text="@string/benfGiro"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_text" />
+
+                        <TextView
+                            android:id="@+id/NombrebenefGiro"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="@string/benfGiro"
+                            android:focusable="false"
+                            android:fontFamily="@font/flexo_bold"
+                            android:text="Nidia Quintana Zaconetta"
+                            android:background="@color/zxing_transparent"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/DniBene"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="@string/benfGiro"
+                            android:focusable="false"
+                            android:fontFamily="@font/flexo_bold"
+                            android:background="@drawable/linea_gray"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:text="DNI - 45697000" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linearOrdenGiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/EditarOrdGiro"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/ic_editar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/msg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/flexo_medium"
+                            android:text="@string/odenanteGiro"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/ordenGiro"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="@string/odenanteGiro"
+                                android:focusable="false"
+                                android:fontFamily="@font/flexo_medium"
+                                android:text="Jorge Alfredo Benavides Velásquez "
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/DniordenGiro"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="@string/benfGiro"
+                                android:focusable="false"
+                                android:fontFamily="@font/flexo_medium"
+                                android:background="@drawable/linea_gray"
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp"
+                                android:text="DNI - 41732865" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linearSolciGiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/EditarSolicGiro"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/ic_editar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/msg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/solicGiro"
+                            android:fontFamily="@font/flexo_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_text"/>
+
+                        <LinearLayout
+                            android:id="@+id/linOrdenGiro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/soliGiro"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="@string/solicGiro"
+                                android:focusable="false"
+                                android:fontFamily="@font/flexo_medium"
+                                android:text="Alexis Suarez Chavez"
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/DniSoli"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="@string/benfGiro"
+                                android:focusable="false"
+                                android:fontFamily="@font/flexo_medium"
+                                android:background="@drawable/linea_gray"
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp"
+                                android:text="DNI - 45697000" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/EditarMonto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/ic_editar" />
+
+                    <LinearLayout
+                        android:id="@+id/linearMontoGiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/montGiro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/montoGiro"
+                            android:fontFamily="@font/flexo_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/color_text"/>
+
+                        <LinearLayout
+                            android:id="@+id/linMontoGiro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/simbolMonto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:hint="S/"
+                                android:focusable="false"
+                                android:background="@drawable/linea_gray"
+                                android:fontFamily="@font/flexo_medium"
+                                android:text=""
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp"/>
+                            <TextView
+                                android:id="@+id/monGiro"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:hint="@string/solicGiro"
+                                android:fontFamily="@font/flexo_medium"
+                                android:focusable="false"
+                                android:background="@drawable/linea_gray"
+                                android:text="100.00"
+                                android:textColor="@color/color_text"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearComision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/comGiro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/comisionEmision"
+                        android:fontFamily="@font/flexo_medium"
+                        android:textSize="13sp"
+                        android:textColor="@color/color_text"/>
+
+                    <LinearLayout
+                        android:id="@+id/linComisionGiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/simbolComision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:hint="S/"
+                            android:fontFamily="@font/flexo_medium"
+                            android:focusable="false"
+                            android:text=""
+                            android:textColor="@color/color_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/comision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:text="1.89"
+                            android:fontFamily="@font/flexo_medium"
+                            android:textSize="14sp"
+                            android:textColor="@color/color_text"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/total"
+                        android:fontFamily="@font/flexo_medium"
+                        android:textColor="@color/color_text"
+                        android:textSize="13sp"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/linTtotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/simbolTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:hint="S/"
+                            android:fontFamily="@font/flexo_medium"
+                            android:focusable="false"
+                            android:text=""
+                            android:textColor="@color/color_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/TotalTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:text="1.89"
+                            android:fontFamily="@font/flexo_medium"
+                            android:textSize="14sp"
+                            android:textColor="@color/color_text"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearTipCambio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tipoCambio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/tipoCambio"
+                        android:fontFamily="@font/flexo_medium"
+                        android:textColor="@color/color_text"
+                        android:textSize="13sp"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/linTipCamb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:id="@+id/tipeCambio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:text="1.89"
+                            android:fontFamily="@font/flexo_medium"
+                            android:textSize="14sp"
+                            android:textColor="@color/color_text"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearTotalPagar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/totPagar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/totalaPagar"
+                        android:fontFamily="@font/flexo_medium"
+                        android:textSize="13sp"
+                        android:textColor="@color/color_text"/>
+
+                    <LinearLayout
+                        android:id="@+id/linTotalPagar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/simbolTotPagar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/flexo_bold"
+                            android:hint="S/"
+                            android:focusable="false"
+                            android:text=""
+                            android:textColor="@color/color_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/totalPagar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/flexo_bold"
+                            android:text="1.89"
+                            android:textSize="14sp"
+                            android:textColor="@color/color_text"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/spinner_btn"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/confirm"
+                        android:background="@drawable/background_btn_orange"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/flexo_bold"
+                        android:layout_marginBottom="25dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</FrameLayout>

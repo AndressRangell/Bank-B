@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_remove_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/ic_background_dark">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textView2"
+        android:fontFamily="@font/flexo_bold"
+        android:text="@string/oprTerminate"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/flexo_bold"
+        android:text="@string/remove_card"
+        android:textColor="@color/white"
+        android:layout_above="@+id/gifRemoveCard"
+        android:layout_marginBottom="50dp"
+        android:textSize="25sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gifRemoveCard"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="15dp"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="flechas_abajo.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:id="@+id/imgCardestadicaremoved"
+            android:layout_width="280dp"
+            android:layout_height="380dp"
+            android:layout_marginBottom="-190dp"
+            android:background="@drawable/bcp_card" />
+
+</LinearLayout>

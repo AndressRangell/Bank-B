@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_giros"
+    app:startDestination="@id/fragmentTypeTransaction">
+
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/fragmentTypePayment">
+        <fragment
+            android:id="@+id/fragment_datos_beneficiario"
+            android:name="com.bcp.transactions.giros.fragments.FragmentBeneficiaryData"
+            android:label="fragment_datos_beneficiario"
+            tools:layout="@layout/fragment_datos_beneficiario" >
+            <action
+                android:id="@+id/action_fragment_datos_beneficiario_to_fragmentPassword"
+                app:destination="@id/fragmentPassword" />
+            <action
+                android:id="@+id/action_fragment_datos_beneficiario_to_fragmentTypePayment"
+                app:destination="@id/fragmentTypePayment" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentTypePayment"
+            android:name="com.bcp.transactions.giros.fragments.FragmentTypePayment"
+            android:label="fragment_tipo_pago"
+            tools:layout="@layout/fragment_tipo_pago">
+            <action
+                android:id="@+id/action_fragmentTypePayment_to_fragment_datos_beneficiario2"
+                app:destination="@id/fragment_datos_beneficiario" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentPassword"
+            android:name="com.bcp.transactions.giros.fragments.FragmentPassword"
+            android:label="fragment_clave"
+            tools:layout="@layout/fragment_clave" >
+            <action
+                android:id="@+id/action_fragmentPassword_to_fragment_datos_beneficiario"
+                app:destination="@id/fragment_datos_beneficiario" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_fragmentTypeTransaction2"
+            app:destination="@id/fragmentTypeTransaction" />
+    </navigation>
+    <fragment
+        android:id="@+id/fragmentTypeTransaction"
+        android:name="com.bcp.transactions.giros.fragments.FragmentTypeTransaction"
+        android:label="fragment_type_transaction"
+        tools:layout="@layout/fragment_type_transaction" >
+        <action
+            android:id="@+id/action_fragmentTypeTransaction_to_navigation"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_fragmentTypeTransaction_to_navigation1"
+            app:destination="@id/navigation2" />
+    </fragment>
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/fragmentTypePayment">
+        <fragment
+            android:id="@+id/fragmentTypePayment"
+            android:name="com.bcp.transactions.giros.fragments.FragmentTypePayment"
+            android:label="fragment_tipo_pago"
+            tools:layout="@layout/fragment_tipo_pago" >
+            <action
+                android:id="@+id/action_fragmentTypePayment_to_fragmentTypeCoin"
+                app:destination="@id/fragmentTypeCoin" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_fragmentTypeTransaction"
+            app:destination="@id/fragmentTypeTransaction" />
+        <fragment
+            android:id="@+id/fragmentTypeCoin"
+            android:name="com.bcp.transactions.giros.fragments.FragmentTypeCoin"
+            android:label="fragment_type_coin"
+            tools:layout="@layout/fragment_type_coin" >
+            <action
+                android:id="@+id/action_fragmentTypeCoin_to_fragmentDatosSolicitante"
+                app:destination="@id/fragmentDatosSolicitante" />
+            <action
+                android:id="@+id/action_fragmentTypeCoin_to_fragmentTypePayment"
+                app:destination="@id/fragmentTypePayment" />
+            <action
+                android:id="@+id/action_fragmentTypeCoin_to_fragmentDetalleGiro"
+                app:destination="@id/fragmentDetalleGiro" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentDatosSolicitante"
+            android:name="com.bcp.transactions.giros.fragments.FragmentDatosSolicitante"
+            android:label="fragment_datos_solicitante"
+            tools:layout="@layout/fragment_datos_solicitante" >
+            <action
+                android:id="@+id/action_fragmentDatosSolicitante_to_fragmentTypeCoin"
+                app:destination="@id/fragmentTypeCoin" />
+            <action
+                android:id="@+id/action_fragmentDatosSolicitante_to_fragmentBeneficiaryDataEmision"
+                app:destination="@id/fragmentBeneficiaryDataEmision" />
+            <action
+                android:id="@+id/action_fragmentDatosSolicitante_to_fragmentDetalleGiro"
+                app:destination="@id/fragmentDetalleGiro" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentDetalleGiro"
+            android:name="com.bcp.transactions.giros.fragments.FragmentDetailGiro"
+            android:label="fragment_detalle_giro"
+            tools:layout="@layout/fragment_detalle_giro" >
+            <action
+                android:id="@+id/action_fragmentDetalleGiro_to_fragmentPassword2"
+                app:destination="@id/fragmentPassword2" />
+            <action
+                android:id="@+id/action_fragmentDetalleGiro_to_fragmentTypeCoin"
+                app:destination="@id/fragmentTypeCoin" />
+            <action
+                android:id="@+id/action_fragmentDetalleGiro_to_fragmentEditData"
+                app:destination="@id/fragmentEditData" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentPassword2"
+            android:name="com.bcp.transactions.giros.fragments.FragmentPassword"
+            android:label="fragment_clave"
+            tools:layout="@layout/fragment_clave" >
+            <action
+                android:id="@+id/action_fragmentPassword2_to_fragmentDetalleGiro"
+                app:destination="@id/fragmentDetalleGiro" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentBeneficiaryDataEmision"
+            android:name="com.bcp.transactions.giros.fragments.FragmentBeneficiaryDataEmision"
+            android:label="fragment_beneficiary_data_emision"
+            tools:layout="@layout/fragment_beneficiary_data_emision" >
+            <action
+                android:id="@+id/action_fragmentBeneficiaryDataEmision_to_fragmentDetalleGiro"
+                app:destination="@id/fragmentDetalleGiro" />
+            <action
+                android:id="@+id/action_fragmentBeneficiaryDataEmision_to_fragmentDatosSolicitante"
+                app:destination="@id/fragmentDatosSolicitante" />
+        </fragment>
+        <fragment
+            android:id="@+id/fragmentEditData"
+            android:name="com.bcp.transactions.giros.fragments.FragmentEditData"
+            android:label="fragment_edit_data"
+            tools:layout="@layout/fragment_edit_data" >
+            <action
+                android:id="@+id/action_fragmentEditData_to_fragmentDetalleGiro"
+                app:destination="@id/fragmentDetalleGiro" />
+        </fragment>
+    </navigation>
+</navigation>

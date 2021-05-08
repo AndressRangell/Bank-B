@@ -1,0 +1,2 @@
+Alias: bcp
+Key store Password / key password: Bcp.2020*

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linearDetalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msgProp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text"
+            android:text="@string/owner"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alonso Castro Tavera"
+            android:fontFamily="@font/flexo_bold"
+            android:textColor="@color/color_text"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/typeAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accountSol"
+            android:textColor="@color/color_text"
+            android:fontFamily="@font/flexo_medium"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/AccountNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text"
+            android:fontFamily="@font/flexo_medium"
+            android:textSize="16sp"
+            android:text="@string/accountExample"/>
+
+        <LinearLayout
+            android:id="@+id/infoExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/infoTvExtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comision"
+                android:textColor="@color/color_text"
+                android:fontFamily="@font/flexo_medium"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/datosInfoEx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text"
+                android:fontFamily="@font/flexo_medium"
+                android:textSize="16sp"
+                android:text="US$ 0.00"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msgMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text"
+            android:fontFamily="@font/flexo_medium"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            android:text="@string/amount"/>
+
+        <TextView
+            android:id="@+id/nroMonto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text"
+            android:fontFamily="@font/flexo_bold"
+            android:textSize="20sp"
+            android:text="S/ 500.00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/linea_gris"
+            android:layout_marginBottom="25dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_exclamation_triangle_r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msgWarning"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/color_text"
+                android:fontFamily="@font/flexo_medium"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/confirm"
+            android:background="@drawable/background_btn_orange"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/flexo_bold"
+            android:layout_marginBottom="25dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

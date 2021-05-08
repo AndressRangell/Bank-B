@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_dark">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gifImpresion"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="print.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="167dp"
+        android:scaleType="fitCenter"/>
+
+
+    <LinearLayout
+        android:id="@+id/procesandoTrans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gifProgres"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/msgTipoOpe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/flexo_bold"
+                android:text="@string/msg_ImprCierrre"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/msgTituloOpe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/flexo_medium"
+                android:text="@string/msg_ReporCierrre"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

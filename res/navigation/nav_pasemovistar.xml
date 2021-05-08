@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pasemovistar"
+    app:startDestination="@id/fragmentingPadding">
+    <fragment
+        android:id="@+id/fragmentDetailPaymentService"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDetailPaymentService"
+        android:label="fragment_detail_payment_service"
+        tools:layout="@layout/fragment_detail_payment_service" >
+        <action
+            android:id="@+id/action_fragmentDetailPaymentService_to_fragmentDocumetClient"
+            app:destination="@id/fragmentDocumetClient" />
+        <action
+            android:id="@+id/action_fragmentDetailPaymentService_to_fragmentingPadding"
+            app:destination="@id/fragmentingPadding" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDocumetClient"
+        android:name="com.bcp.transactions.pagoservicios.fragmentsps.FragmentDocumetClient"
+        android:label="fragment_documet_client"
+        tools:layout="@layout/fragment_documet_client" >
+        <action
+            android:id="@+id/action_fragmentDocumetClient_to_fragmentDetailPaymentService"
+            app:destination="@id/fragmentDetailPaymentService" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentingPadding"
+        android:name="com.bcp.transactions.giros.fragments.FragmentingPadding"
+        android:label="fragment_pandding"
+        tools:layout="@layout/fragment_pandding" >
+        <action
+            android:id="@+id/action_fragmentingPadding_to_fragmentDetailPaymentService"
+            app:destination="@id/fragmentDetailPaymentService" />
+    </fragment>
+</navigation>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.newpos.pay"
+    android:versionCode="1"
+    android:versionName="1.0"
+    tools:ignore="GradleOverrides">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" />
+
+    <application
+        android:name="cn.desert.newpos.payui.base.PayApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_partner_profile"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.bcp.splash.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="com.pos.device"
+            android:required="true" />
+
+        <activity android:name=".ProcessingCertificate" />
+
+        <activity
+            android:name="cn.desert.newpos.payui.master.MasterControl"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/AppTheme.WUZI"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+        <activity
+            android:name="cn.desert.newpos.payui.master.ResultControl"
+            android:configChanges="mcc|mnc|orientation|screenSize|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="cn.desert.newpos.payui.setting.ui.SettingsFrags"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/AppTheme.WUZI"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="cn.desert.newpos.payui.transrecord.HistoryTrans"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/AppTheme.WUZI"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity android:name="cn.desert.newpos.payui.setting.ui.simple.CommunSettings" />
+        <!-- ============================MODO KIOSKO================================ -->
+        <activity
+            android:name=".StartAppBCP"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/SplashTheme">
+        <!-- ======================================================================= -->
+        </activity>
+        <activity android:name="com.bcp.reportes.DetailReport" />
+        <activity android:name="com.bcp.printer.PrintParameter" />
+        <activity android:name="com.bcp.login.Login" />
+        <activity android:name="com.bcp.cambio_clave.CambioClave" />
+        <activity android:name="com.bcp.menus.MenuBCP" />
+        <activity android:name="com.bcp.tools.WifiSettings" />
+        <activity android:name="com.bcp.geolocalizacion.Geolocalizacion" />
+        <!-- ============================START BOOT================================ -->
+        <receiver
+            android:name="com.bcp.startboot.StartBoot"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

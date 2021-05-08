@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nv_tarjeta_cobros"
+    app:startDestination="@id/fragmentBeneficiaryData">
+
+    <fragment
+        android:id="@+id/fragmentBeneficiaryData"
+        android:name="com.bcp.transactions.giros.fragments.FragmentBeneficiaryData"
+        android:label="fragment_datos_beneficiario"
+        tools:layout="@layout/fragment_datos_beneficiario" />
+</navigation>

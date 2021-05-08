@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">融桌面</string>
+    <string name="ip_invalid">无效的IP地址</string>
+    <string name="app_init">应用程序正在初始化</string>
+    <string name="app_setting">程序设置</string>
+    <string name="unknown_err">未知错误</string>
+    <string name="len_err">长度错误</string>
+    <string name="data_null">数据不能为空</string>
+    <string name="input_err_reinput">输入有误,请重输</string>
+    <string name="cancel">取消</string>
+    <string name="accept">确认</string>
+    <string name="restore">恢复默认</string>
+    <string name="stay_tuned">敬请期待</string>
+    <string name="no_any_data">暂无数据</string>
+    <string name="clear_data">清除数据</string>
+    <string name="op_fail">操作失败</string>
+    <string name="save">保存</string>
+    <string name="exit">退出</string>
+    <string name="submit">提交</string>
+    <string name="prompt">提示</string>
+    <string name="next">下一步</string>
+    <string name="sending_content">正在发送反馈和建议</string>
+    <string name="app_exit">再按一次退出程序</string>
+    <string name="save_success">保存成功</string>
+    <string name="original_pass_err">原密码错误</string>
+    <string name="appstore_not_install">本设备尚未安装融商店，请前往下载安装</string>
+    <string name="send_email">发送邮件</string>
+    <string name="send_success">我们已经受到您宝贵的建议,我们会更加努力!</string>
+    <string name="send_fail">发送失败,请稍后重试</string>
+    <string name="send_email_hint">请输入您的宝贵意见和建议</string>
+
+    <string name="is_revocation">已撤销</string>
+    <string name="is_completed">已完成</string>
+    <string name="re_print">重打印</string>
+    <string name="not_any_record">参考不存在</string>
+    <string name="pay_code">付款码</string>
+    <string name="card_num">卡号</string>
+    <string name="auth_code">授权码</string>
+    <string name="voucher_num">流水号</string>
+    <string name="amount">金额</string>
+    <string name="batch_num">批次号</string>
+    <string name="trans_date">交易时间</string>
+    <string name="trans_type">交易类型</string>
+    <string name="trans_sys_para">系统参数</string>
+    <string name="trans_merchant_para">商户信息</string>
+    <string name="trans_master_pass_para">主管密码修改</string>
+    <string name="modify_maintain_pass">维护密码修改</string>
+    <string name="old_pass">原密码</string>
+    <string name="new_pass">新密码</string>
+    <string name="trans_scan_para">扫码参数</string>
+    <string name="trans_void_pass">消费撤销是否输密</string>
+    <string name="trans_void_card">消费撤销是否用卡</string>
+    <string name="trans_contactless_pboc">是否强制非接PBOC</string>
+    <string name="front_camera">前置摄像头</string>
+    <string name="back_camera">后置摄像头</string>
+    <string name="online_trans">联网交易</string>
+    <string name="local_present">本地演示</string>
+    <string name="errlog_list">错误日志列表</string>
+    <string name="android_setting">安卓系统设置</string>
+    <string name="feedback_advice">反馈及建议</string>
+    <string name="trace_no">流水号</string>
+    <string name="batch_no">批次号</string>
+    <string name="tpdu_no">TPDU</string>
+    <string name="firm_no">商行代码</string>
+    <string name="print_num_choice">打印联数选择</string>
+    <string name="reversal_counts_choice">冲正次数选择</string>
+    <string name="wait_user_time">等待用户交互时间(秒)</string>
+    <string name="open_encrypt_track">开启磁道加密</string>
+    <string name="open_scan_beep">开启蜂鸣器提示</string>
+    <string name="open_shine_light">开启闪光灯</string>
+    <string name="camera_location_choice">摄像头位置选择</string>
+    <string name="merchant_id">商户号</string>
+    <string name="terminal_id">终端号</string>
+    <string name="merchant_name">商户名称</string>
+    <string name="wait_connect_time">通讯等待时长(秒)</string>
+    <string name="open_public_network">开启公网通讯</string>
+    <string name="public_network_ip">公网服务器IP地址</string>
+    <string name="public_network_port">公网服务器端口</string>
+    <string name="intranet_network_ip">内网服务器IP地址</string>
+    <string name="intranet_network_port">内网服务器端口</string>
+    <string name="please_input_masterkey_index">请输入主密钥索引</string>
+    <string name="please_input_masterkey_data">请输入主密钥数据</string>
+    <string name="please_chose_key_type">请选择密钥体系</string>
+    <string name="des">DES</string>
+    <string name="gm">国密</string>
+    <string name="online_or_local">联网交易或本地演示</string>
+    <string name="open_app_debug_output">打开日志输出</string>
+    <string name="close_app_debug_output">关闭日志输出</string>
+    <string name="launcher_style">桌面样式及风格</string>
+    <string name="classical_launcher">经典桌面</string>
+    <string name="simple_launcher">简易桌面</string>
+    <string name="customers_or_logo">演示客户或LOGO</string>
+    <string name="please_input_amount">请输入收款金额</string>
+    <string name="please_input_master_pass">请输入主管密码</string>
+    <string name="please_input_trace_no">请输入原交易凭证码</string>
+    <string name="please_input_auth_code">请输入原交易授权码</string>
+    <string name="please_input_data_time">请输入原交易日期</string>
+    <string name="please_input_reference">请输入原交易参考号</string>
+    <string name="please_input_traceno_hint">请输入交易流水号</string>
+    <string name="scan">扫码</string>
+    <string name="preauth">预授权</string>
+    <string name="salevoid">消费撤销</string>
+    <string name="query">查询打印</string>
+    <string name="cash">收款</string>
+    <string name="management">管理功能</string>
+    <string name="others">其它</string>
+    <string name="trans_result">交易结果</string>
+    <string name="find_result">查询结果</string>
+    <string name="confirm_card_no">请确认卡号</string>
+    <string name="swipe_card_right">磁条卡请在右侧刷卡</string>
+    <string name="insert_card_bootom">IC卡请从终端底部插入卡槽</string>
+    <string name="pat_card_above">把卡放在终端上端进行挥卡</string>
+    <string name="prompt_door"> \n \n华智融，融天下支付\n \n(点击开启)</string>
+    <string name="void_original_trans">原交易:</string>
+    <string name="void_pay_code">付款码:</string>
+    <string name="void_card_no">卡号:</string>
+    <string name="void_trace_no">流水号:</string>
+    <string name="void_auth_code">授权码:</string>
+    <string name="void_batch_no">批次号:</string>
+    <string name="void_amount">金额:</string>
+    <string name="void_time">交易时间:</string>
+    <item name="tag_item_user" type="id"></item>
+    <item name="tag_item_history_trans" type="id"></item>
+    <string name="qr_bar_code">请将二维码/条码对准扫描框</string>
+    <string name="trans_detail">交易详情</string>
+    <string name="_q">Q</string>
+    <string name="_w">W</string>
+    <string name="_e">E</string>
+    <string name="_r">R</string>
+    <string name="_t">T</string>
+    <string name="_y">Y</string>
+    <string name="_u">U</string>
+    <string name="_i">I</string>
+    <string name="_o">O</string>
+    <string name="_p">P</string>
+    <string name="_a">A</string>
+    <string name="_s">S</string>
+    <string name="_d">D</string>
+    <string name="_f">F</string>
+    <string name="_g">G</string>
+    <string name="_h">H</string>
+    <string name="_j">J</string>
+    <string name="_k">K</string>
+    <string name="_l">L</string>
+    <string name="_punto">.</string>
+    <string name="_z">Z</string>
+    <string name="_x">X</string>
+    <string name="_c">C</string>
+    <string name="_v">V</string>
+    <string name="_b">B</string>
+    <string name="_n">N</string>
+    <string name="_ñ">Ñ</string>
+    <string name="_m">M</string>
+
+    <!--TEXTOS REPORTE DETALLADO Y CIERRE -->
+    <string name="tittleDep">DEPÓSITOS</string>
+    <string name="tittlePS">PAGO DE SERVICIOS</string>
+    <string name="tittleRet">RETIROS</string>
+    <string name="totSoles">TOTAL SOLES</string>
+    <string name="totOper">TOTAL OPER</string>
+    <string name="tittleCargCta">INGRESOS EN EFECTIVO (CARGO EN CTA.)</string>
+    <string name="tittleAbnCta">SALIDAS EN EFECTIVO (ABONO EN CTA)</string>
+    <string name="totIngEfec">TOTAL INGRESOS EFECTIVO. </string>
+    <string name="totOprIngEfec">TOTAL OPR. INGRESO</string>
+    <string name="totSalEfec">TOTAL SALIDAS EFECTIVO. </string>
+    <string name="totOprSalEfec">TOTAL OPR. SALIDA</string>
+    <string name="repDetail">REPORTE DETALLADO</string>
+    <string name="totSettle">REPORTE DE CIERRE TOTAL</string>
+    <string name="msgAccountClientMenc">Menciónale al cliente:</string>
+    <string name="msgAccountClientRet">El monto ingresado</string>
+    <string name="msgAccountClientSign">Ahorro soles S/</string>
+    <string name="msgAccountClientBtn">Entendido</string>
+    <string name="msgAccountClientBtnExit">Salir</string>
+    <string name="deposito1">"Depósito realizado a número de cuenta"</string>
+    <string name="auth">"Autorizado"</string>
+    <string name="confirmAmount">Confirmar monto</string>
+    <string name="confirmPasword">Confirmar clave</string>
+    <string name="createPasword">Crear clave</string>
+    <string name="tittleGiroEmision">EMISIÓN GIROS</string>
+    <string name="tittleGiroCobros">DESCARGO DE GIROS</string>
+    <string name="tittleGiroEmisionCard">GIROS EMITIDOS</string>
+    <string name="tittleGiroCobrosCard">GIROS COBRADOS</string>
+    <string name="endReportDetail">---------------FIN REPORTE---------------</string>
+    <string name="oprWithCard">OPERACIONES CON TARJETA</string>
+
+    <string name="lastSettle">ÚLTIMO CIERRE: </string>
+    <string name="settleOper">CIERRE DE OPERACIONES EN EL RANGO: </string>
+    <string name="dateFirstOper">FECHA PRIM. OPER: </string>
+    <string name="dateLastOper">FECHA ULT.   OPER: </string>
+    <string name="numOper">NUM OPER PROCESADAS        </string>
+    <string name="operEfectivo">OPERACIONES CON EFECTIVO</string>
+    <string name="totOperIn">TOTAL OPER. INGRESOS </string>
+    <string name="totOperOut">TOTAL OPER. SALIDA </string>
+    <string name="totOutgEfec">TOTAL SALIDA EFECTIVO. </string>
+    <string name="operWithCard">OPERACIONES CON TARJETA</string>
+    <string name="operNoMoney">OPERACIONES NO MONETARIAS</string>
+    <string name="endReport">----- FIN DEL REPORTE -----</string>
+    <string name="saldos">CONSULTA DE SALDO</string>
+    <string name="movimientos">ULTIMOS MOVIMIENTOS</string>
+
+
+    <string name="comprobanteimpre">Comprobante impreso</string>
+    <string name="entregaCompro">Recibe dinero y entrega comprobante</string>
+    <string name="entregaComproCliente">Entrega comprobante al cliente </string>
+    <string name="dineroCliente">Entrega el dinero y comprobante al cliente"</string>
+    <string name="sinComprobante">Sin comprobante"</string>
+    <string name="entrDinerCliente">Entrega el dinero al cliente"</string>
+    <string name="copiaEstabl">Copia para establecimiento"</string>
+    <string name="sinCopia">Sin copia"</string>
+
+    <string name="network">NETWORK LOCATION</string>
+    <string name="longitud">Longitud</string>
+    <string name="latitud">Latitud</string>
+    <string name="distancia"> La distancia es: </string>
+    <string name="resumen">RESUMEN</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="details">123456789</string>
+    <string name="reprint">Reprint</string>
+
+    <!--MENSAJE DE RETIRO -->
+    <string name="inicioTrans">Se inicia transacción </string>
+    <string name="finTrans">Se finaliza transacción </string>
+    <string name="numDNI">Número de DNI</string>
+    <string name="numRUC">Número de RUC del solicitante</string>
+    <string name="numTarjetaExtra">Número de Carnet de extranjería</string>
+    <string name="selecCuenta">Selecciona una cuenta de retiro</string>
+    <string name="ingresoDoc">Ingresa el número de documento</string>
+
+    <!--MENSAJE DE DEPOSITO -->
+    <string name="tipoDepos">Seleccione el tipo de depósito</string>
+    <string name="deposNumCuenta">Se selecciona opcion: Con número de cuenta</string>
+    <string name="deposTrajeta">Se selecciona opcion: Con tarjeta</string>
+    <string name="selectCuentaDepo">Selecciona cuenta de depósito</string>
+    <string name="cuentaDest">Ingresa la cuenta de destino</string>
+    <string name="datosDepositante">Ingresa los datos del depositante</string>
+    <string name="numCuenta">Número de cuenta</string>
+    <string name="numDocu">Número de documento</string>
+    <string name="msgDocIgual">Los documentos ingresados no pueden ser iguales</string>
+
+    <!--MENSAJE DE MASTER CONTROL-->
+    <string name="maxCaracteres">Los caracteres ingresados sobrepasan el máximo de caracteres</string>
+    <string name="minCaracteres">Los caracteres ingresados no cumplen con el mínimo de caracteres</string>
+    <string name="passwordConfirm">Las contraseñas NO coinciden intentelo nuevamente</string>
+    <string name="segundos">\ssegundos</string>
+    <string name="mjsparmentros">No se encontraron parámetros</string>
+    <string name="camposRequeridos">Debe llenar correctamente los campos requeridos</string>
+    <string name="ingFirma">Debe ingresar Firma </string>
+    <string name="informacionmjs">Información</string>
+
+    <string name="msgAmountMax">has superado el monto diario permitido\nDisponible : </string>
+
+    <!--MENSAJE DE LOGIN-->
+    <string name="intiLogin">Inicia Login</string>
+    <string name="menSupervisor">Se ingresa a menú supervisor</string>
+    <string name="menuPrinci">Se ingresa a menú principal</string>
+    <string name="contraCorrecta">Contraseña correcta, se direccionara a menú principal</string>
+    <string name="contraIncorrec">Contraseña incorrecta, intento número =</string>
+
+    <!--MENSAJE DE CLICK_KEYBOARD-->
+    <string name="numCarnetDepo">Número de Carnet EXT del depositante</string>
+    <string name="numPasaportDepo">Número de Pasaporte del depositante</string>
+    <string name="numDniDepo">Número de DNI del depositante</string>
+    <string name="numCarnetBenef">Número de Carnet EXT del beneficiario</string>
+    <string name="numPasaportBenef">Número de Pasaporte del beneficiario</string>
+    <string name="numDniBenef">Número de DNI del beneficiario</string>
+    <string name="numRucBenef">Número de Pasaporte del beneficiario</string>
+
+    <!--MENSAJE DE CAMBIO CLAVE-->
+    <string name="crearClave">Crear nueva clave</string>
+    <string name="cambioClave">Cambio de clave</string>
+    <string name="continuar">Continuar</string>
+    <string name="camContrExitosa">La contraseña se ha cambiado exitosamente</string>
+    <string name="contraNoCoincide">La nueva contraseña no coincide!!!!</string>
+    <string name="msgContraIncorrecta">La contraseña ingresada no corresponde a la actual!!!</string>
+    <string name="contraCreada">La contraseña se ha creado exitosamente</string>
+    <string name="msgNoconinciden">Las contraseñas no coinciden!!!!</string>
+    <string name="aceptar">Aceptar</string>
+
+    <!--MENSAJE DE FILEMANAGEMENT-->
+    <string name="archEliminado">archivo eliminado</string>
+    <string name="createFile">create file fail</string>
+    <string name="error">Error</string>
+
+    <!--MENSAJE DE CLASE  GEOLOCALIZACION-->
+    <string name="enableLocali">Enable Location</string>
+    <string name="msgUbicaDesact">Su ubicación esta desactivada por favor active su ubicación</string>
+    <string name="configUbica">Configuración de ubicación</string>
+    <string name="congigRedConf">El proveedor de red comenzó a ejecutarse</string>
+    <string name="actProveeRed">Actualización de proveedor de red</string>
+    <string name="localizacion1">localización 1</string>
+    <string name="localizacion2">localización 2</string>
+    <string name="km">km</string>
+    <string name="msjDistancia">La distancia es mayor de 50m!</string>
+
+    <!--MENSAJE DE CIERRE TOTAL-->
+    <string name="msg_ImprCierrre">Imprimiendo</string>
+    <string name="msg_ReporCierrre">Reporte de cierre total</string>
+    <string name="msg_ReporCierrreTotal">REPORTE CIERRE TOTAL</string>
+    <string name="msg_RetiroImpr">Retire el comprobante</string>
+    <string name="msgCierreTotal">Cierre Total</string>
+    <string name="msgSettle1">¡Fecha límite de cierre!</string>
+    <string name="msgSettle2">Presione continuar</string>
+    <string name="msgSettle3">para realizar cierre</string>
+
+    <!--MENSAJE DE CONSULTAS-->
+    <string name="tipoConsulta">Selecciona tipo consulta</string>
+    <string name="msgsandos">Saldos</string>
+    <string name="msgMovimiento">Movimientos</string>
+    <string name="msgSeleccionCuentaConsul">Selecciona la cuenta a consultar</string>
+
+    <!--MENSAJE DE HISTORYDETAIL-->
+    <string name="seledmsg">Selected</string>
+    <string name="msgDMH">yyyyMMddHHmmss</string>
+    <string name="msgyymmhh">yyyy/MM/dd  HH:mm:ss</string>
+    <string name="msgColor">color</string>
+    <string name="version">V</string>
+
+    <!--MENSAJE DE MENUBCP-->
+    <string name="msgInitTimer">"init onTick countDownTimer HomeBCP" </string>
+    <string name="msgfinishTimer">finish onTick countDownTimer HomeBCP</string>
+    <string name="msgInitTimerSettle">init onTick countDownTimer SETTLE </string>
+    <string name="msgfinishTimerSettle">finish onTick countDownTimer SETTLE </string>
+
+    <!--MENSAJE DE REPORTE DETALLADO-->
+    <string name="msgReporte">REPORTE</string>
+    <string name="msgEstado">Nuevo estado:</string>
+    <string name="msgOffset">Offset</string>
+    <string name="msgSoles">SOLES</string>
+
+    <string name="cta">"CTA."</string>
+    <string name="decta">"DE CTA."</string>
+    <string name="acta">"A CTA."</string>
+    <string name="name">NOMBRE:</string>
+    <string name="saldoCtb">SALDO CONTABLE:   </string>
+    <string name="saldoDsp">SALDO DISPONIBLE: </string>
+
+
+    <string name="pen">PEN</string>
+    <string name="usd">USD</string>
+    <string name="ctaSoles">Cuenta en Soles S/</string>
+    <string name="ctaDolares">Cuenta en Dólares US$</string>
+
+    <string name="ingClaveCliente">Ingresa clave de tarjeta</string>
+    <string name="ingClaveAgente">Ingresa clave de socio</string>
+    <string name="oprTerminate">¡Operación terminada!</string>
+    <string name="deposito">DEPOSITO</string>
+    <string name="settle">SETTLE</string>
+    <string name="depAmount">Ingresa el monto a depositar</string>
+    <string name="impExitosa">Impresión exitosa</string>
+    <string name="exitosoCerti">Exitosamente</string>
+
+    <string name="decimas_monto">0.00</string>
+    <string name="maxPermitido">supera el máximo permitido</string>
+    <string name="minPermitido">no supera el mínimo permitido</string>
+    <string name="thisTransaction">en esta transacción</string>
+    <string name="retAccount">Estás retirando de tu cuenta</string>
+
+    <!-- GIROS -->
+    <string name="benfGiro">Beneficiario del giro:</string>
+    <string name="odenanteGiro">Ordenante del giro:</string>
+    <string name="solicGiro">Solicitante del giro:</string>
+    <string name="ordeSolicGiro">Ordenante y Solicitante del giro:</string>
+    <string name="montoGiro">Monto de giro:</string>
+    <string name="comision">Comisión Giro:</string>
+    <string name="comisionEmision">Comisión:</string>
+    <string name="totalaPagar">Total a pagar:</string>
+    <string name="total">Total:</string>
+    <string name="tipoCambio">Tipo de cambio:</string>
+    <string name="tipoDocSoli">Tipo de documento del solicitante</string>
+    <string name="tipoDocBenf">Tipo de documento del Beneficiario</string>
+    <string name="numDNISolici">Número de DNI del solicitante</string>
+    <string name="numEXTSolici">Número de Carnet EXT del solicitante</string>
+    <string name="numPASSolici">Número de Pasaporte del solicitante</string>
+    <string name="numRUCSolici">Número de RUC del solicitante</string>
+    <string name="nomApell">Nombres y apellidos del solicitante</string>
+    <string name="nomApellBene">Nombre y apellidos del beneficiario</string>
+    <string name="numDNIOrdenate">Número de DNI de ordenante </string>
+    <string name="numEXTOrdenate">Número de Carnet EXT de ordenante </string>
+    <string name="numPASOrdenate">Número de Pasaporte del ordenante </string>
+    <string name="numRUCOrdenate">Número de RUC del  ordenante </string>
+    <string name="ordMisSoli">¿El ordenante es el mismo que el solicitante?</string>
+    <string name="TipoDocOrdenant">Tipo de documento del ordenante</string>
+    <string name="NumDocOrdenant">Número de DNI de ordenante</string>
+    <string name="NomOrdenante">Nombre y apellidos del ordenante</string>
+    <string name="giros">GIROS</string>
+    <string name="tipoGiro">Seleccione el tipo de giro</string>
+    <string name="cobrnacio">Se selecciona la opcion: cobros nacionale</string>
+    <string name="giro1">"Cobros nacionales"</string>
+    <string name="docBen">"Numero de documento del beneficiario"</string>
+    <string name="spinner">"Elige una opción"</string>
+    <string name="tipoefect">"Giro realizado en efectivo"</string>
+    <string name="tipotarj">"Giro realizado en con tarjeta"</string>
+    <string name="formaPago">"Seleccione la forma de pago"</string>
+    <string name="depoEfectivo">Se selecciona opcion: En efectivo</string>
+    <string name="clave_secreta">Clave Secreta</string>
+    <string name="clave_8_digitos"><font size="10">Entre 4 a 8 dígitos</font></string>
+    <string name="datosBeneficiario">Ingresa datos del beneficiario</string>
+    <string name="datosClaveGiro">Crea clave secreta del giro</string>
+    <string name="claveGiroSecreta">Ingresa clave secreta del giro</string>
+    <string name="confirmClaveGiro">Confirma clave secreta del giro</string>
+    <string name="nombreOrdenante">Ingresa nombres y apellidos</string>
+
+    <!--INTENTOS ACCESO FALLIDOS-->
+    <string name="msgFailedAttemptTittle">¡Acceso Bloqueado!</string>
+    <string name="msgFailedAttempt1">Por favor, Vuelve a</string>
+    <string name="msgFailedAttempt2">intentarlo en:</string>
+
+    <string name="changeDocument">Cambiar documento</string>
+    <string name="msg1Giros">No existen Giros por cobrar</string>
+    <string name="msg5Giros">para el documento ingresado.</string>
+    <string name="msg2Giros">Puede cambiar de documento o\nllamar al 311–9898</string>
+    <string name="msg3Giros">No emitimos factura</string>
+    <string name="msg4Giros">Haz tus giros con factura en \ncualquier agencia BCP </string>
+    <string name="girocobro">"Selecciono Emisión nacional o Cobros al exterior"</string>
+    <string name="msgCobroGiro">"Cobro de giro realizado"</string>
+    <string name="titleCobroGiro">"Cobro de giro"</string>
+    <string name="titleEmisGiro">"Giro emitido"</string>
+    <string name="titleEmisGiroEnd">"Emisión de giro realizado"</string>
+    <string name="titleImpGiro">"Importe giro"</string>
+    <string name="msg1GiroDol">"El giro se abonará en tu cuenta"</string>
+    <string name="msg1GiroSol">"Estas abonando en tu cuenta"</string>
+    <string name="msg3GiroDolar">"Aplica tipo de cambio BCP "</string>
+    <string name="selecCuentaGiro">Selecciona una cuenta de Giro</string>
+    <string name="autorizada">"Autorizada"</string>
+    <string name="consulta">Consulta</string>
+    <string name="emisionNaci">Se selecciona la opcion: Emisión nacional</string>
+    <string name="TypeEmision">Selecciona la forma de operación</string>
+    <string name="titleEmision">Ingresa monto a girar</string>
+    <string name="titleTypeTrnas">Selecciona la opción de giro</string>
+    <string name="tittleEmision">Ingresa datos del solicitante y ordenante</string>
+    <string name="tittleSender">Ingresa datos del solicitante</string>
+    <string name="tittleRemitter">Ingresa datos del ordenante</string>
+    <string name="shapeOperation">Selecciona la forma de operación</string>
+    <string name="accountPrimary">Selecciona cuenta propia</string>
+    <string name="emGiros">EMISION DE GIROS</string>
+    <string name="coGiros">DESCARGO GIROS</string>
+    <string name="girosE">GIROS EMITIDOS</string>
+    <string name="girosC">GIROS COBRADOS</string>
+    <string name="titleDetallGiro">Detalle del giro</string>
+    <string name="msg1GiroEmisionSol">"Estas retirando de tu cuenta"</string>
+    <string name="msg1AhorroSoles">Ahorros Soles S/</string>
+
+    <!-- PAGO DE SERVICIOS  -->
+    <string name="servicios">Servicios más buscados</string>
+    <string name="categiorias">Categorías</string>
+    <string name="selecServicio">Selecciona una Servicio</string>
+    <string name="titleMiBanco">Mi banco</string>
+    <string name="titleTipServicio">Tipo de servicio</string>
+    <string name="msgWarningPago">Verifica los datos ingresados y recibe\n  el efectivo antes de confirmar</string>
+    <string name="titlePropietario">Propietario del servicio</string>
+    <string name="titleEmpresa">Empresa</string>
+    <string name="titleOtrosCaros">Otros cargos:</string>
+    <string name="titleComision">Comisión:</string>
+    <string name="must_init">Inicialice!!</string>
+    <string name="err_read_db">Error al leer BD</string>
+    <string name="without_internet">Sin Internet\n Esperando conexión</string>
+    <string name="err_connected">No se estableció\n Conexión</string>
+    <string name="titlePse">Movistar</string>
+    <string name="titleTelefono">Número de teléfono</string>
+    <string name="titleDoc">Ingresa el número de documento</string>
+    <string name="titleNumDoc">"Número de DNI del cliente"</string>
+    <string name="titleTypeService">Selecciona un servicio</string>
+    <string name="titleCodServicio">Código de servicio</string>
+    <string name="titleMsgBCP">Este pago está sujeto al tipo de cambio BCP</string>
+    <string name="titleDetPagoServ">Detalle de pago del servicio</string>
+    <string name="saltarmsg">Saltar</string>
+    <string name="selecPago">Selecciona la forma de pago</string>
+    <string name="busNombre">Buscar por nombre</string>
+    <string name="pagoServicios">PAGO_SERVICIOS</string>
+    <string name="tipoefectPS">"Pago realizado en efectivo"</string>
+    <string name="numTelefono">Numero de Telefono</string>
+    <string name="tipoDocClient">Tipo de documento de cliente</string>
+    <string name="montoMin">Monto Minimo</string>
+    <string name="montoTotal">Monto Total</string>
+    <string name="msg1deudas">No existen deudas\n pendientes de pago</string>
+    <string name="msg2deudas">Para el código de servicio\n ingresado.Puede cambiar de\n código o comunicarse con la\n empresa consultada.</string>
+    <string name="msgAccountPS">Estas pagando desde tu cuenta</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- determinar cuánto tiempo tarda el menú desplegable en animar la entrada / salida -->
+    <integer name="dropdownanimationtime">200</integer>
+</resources>

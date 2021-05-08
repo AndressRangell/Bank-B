@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bcp.transactions.giros.fragments.FragmentTypeAccount"
+    android:id="@+id/fragmentTA">
+
+    <include
+        android:id="@+id/menuTipoCuenta"
+        layout="@layout/menu_seleccion_cuenta" />
+
+    <RelativeLayout
+        android:id="@+id/msgRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/blue_dark">
+
+    <include
+        android:id="@+id/msgAccount"
+        layout="@layout/msg_account"
+        android:visibility="gone"/>
+    </RelativeLayout>
+</FrameLayout>

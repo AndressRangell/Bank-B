@@ -1,0 +1,188 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bcp.transactions.giros.fragments.FragmentPasePayment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+
+        <LinearLayout
+            android:id="@+id/linearTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center|left"
+                android:text="Tipo de Servicio"
+                android:textColor="@color/color_text"
+                android:textSize="17sp"
+                tools:ignore="UselessParent">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/flexo_medium"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/txtSpinerService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_medium"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/btn_spinner_select"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/dp_10"
+                    android:hint="@string/OpcionDoc"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill,TextFields,UselessParent"/>
+
+                <TextView
+                    android:id="@+id/selectService"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/zxing_transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btnTipoServicio"
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_arrow_down_blue"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linNumPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearTipoServicio"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center|left"
+                android:text="@string/titleTelefono"
+                android:textColor="@color/color_text"
+                android:textSize="17sp"
+                tools:ignore="UselessParent"/>
+
+
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:focusable="false"
+                android:fontFamily="@font/flexo_medium"
+                android:hint="@string/_14_digitos"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,TextFields"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/Btncontinuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_estados_continuar"
+                android:fontFamily="@font/flexo_bold"
+                android:gravity="center"
+                android:text="@string/continuar"
+                android:enabled="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/msgAccount"
+            layout="@layout/msg_account"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/relativeTiposervicio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80070707"
+            android:fontFamily="@font/flexo_medium"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:id="@+id/LinTipoServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_spinner"
+                android:fontFamily="@font/flexo_medium"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="1dp"
+                tools:ignore="RtlHardcoded">
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/keyboardNumerico"
+            layout="@layout/activity_keyboard"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/keyboardAlfa"
+            layout="@layout/teclado_alfanumerico"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</FrameLayout>

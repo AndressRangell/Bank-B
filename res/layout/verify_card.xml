@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_dark">
+
+    <LinearLayout
+        android:id="@+id/procesandoTrans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gifProgresverify"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            app:lottie_autoPlay="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/verify"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/flexo_bold"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="@string/verificando"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearPruebaTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-120dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gifFlechasverify"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="15dp"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_fileName="flechas_arriba.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false"/>
+
+
+        <ImageButton
+            android:id="@+id/imgCardestadica"
+            android:layout_width="280dp"
+            android:layout_height="380dp"
+            android:background="@drawable/bcp_card" />
+    </LinearLayout>
+</RelativeLayout>

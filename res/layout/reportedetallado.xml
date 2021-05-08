@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_background_dark">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gifReportePaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="print.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="false"
+        android:visibility="gone"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="REPORTE DETALLADO"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/viewsubtitulo1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/view_punteado"/>
+
+            <TextView
+                android:id="@+id/oprEfectivo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="OPERACIONES CON EFECTIVO"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="left"
+                android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/viewsubtitulo2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/view_punteado"/>
+
+            <!--BLOQUE INGRESO EFECTIVO-->
+
+            <LinearLayout
+                android:id="@+id/linearDetailDeposito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <TextView
+                    android:id="@+id/ingefectivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <!-- bloque deposito-->
+
+                <LinearLayout
+                    android:id="@+id/transDeposito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/deposito"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/history_dep"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totsoles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotSoles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoper"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOper"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- FIN BLOQUE DEPOSITO-->
+
+                <!-- BLOQUE PAGO SERVICIOS -->
+
+                <LinearLayout
+                    android:id="@+id/transPagoServicios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pagoServicios"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/historyPagoServicios"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totsolesPagoServicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotSolesPagoServicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperPagoServicios"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperPagoServicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- FIN BLOQUE PAGO SERVICIOS -->
+
+                <!-- BLOQUE GIROS EMISION-->
+
+                <LinearLayout
+                    android:id="@+id/transGirosEmision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/giroEmision"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black" />
+
+                    <ListView
+                        android:id="@+id/history_giro_emision"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totsolesGemision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotSolesGemision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperGemision"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperGemision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--FIN BLOQUE GIROS EMISION-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:id="@+id/totingefectivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotIngEfectivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:id="@+id/totOprIngreso"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotOprIngreso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+            </LinearLayout>
+
+            <!--FIN BLOQUE INGRESO EFECTIVO-->
+
+            <!--BLOQUE SALIDA DE EFECTIVO-->
+
+            <LinearLayout
+                android:id="@+id/linearDetailRetiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <TextView
+                    android:id="@+id/salefectivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text=""
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <!--BLOQUE RETIRO-->
+
+                <LinearLayout
+                    android:id="@+id/transRetiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/retiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/history_ret"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rel3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totsolesfin"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/totSoles"
+                            android:layout_marginEnd="30dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotSolesFin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totaloperfin"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/totOper"
+                            android:layout_marginEnd="30dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotOperFin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--FIN BLOQUE RETIRO-->
+
+                <!-- BLOQUE GIROS COBROS-->
+
+                <LinearLayout
+                    android:id="@+id/transGirosCobros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/giroCobros"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/history_giro_Cobros"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totsolesGCobros"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/valTotSolesGCobros"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperGCobros"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperGCobros"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--FIN BLOQUE GIROS COBROS-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:id="@+id/totSalefectivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotSalEfectivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:id="@+id/totOprSalida"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotOprSalida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+            </LinearLayout>
+
+            <!--FIN BLOQUE SALIDA DE EFECTIVO-->
+
+            <!--BLOQUE OPERACIONES CON TARJETA-->
+
+            <LinearLayout
+                android:id="@+id/linearOperWithCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <TextView
+                    android:id="@+id/operWithCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text=""
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <LinearLayout
+                    android:id="@+id/transPagoServiciosCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pagoServiciosCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/historyPagoServiciosCard"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperPagoServiciosCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperPagoServiciosCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/transGirosEmisionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/giroEmisionCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/history_giro_Emision_Card"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperGEmisionCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperGEmisionCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/transGirosCobrosCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/giroCobrosCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text=""
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/history_giro_Cobros_Card"
+                        style="@style/Listview_Nodiv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/view_punteado" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="75dp">
+
+                        <TextView
+                            android:id="@+id/totoperGCobrosCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/valTotOperGCobrosCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--FIN BLOQUE OPERACIONES CON TARJETA-->
+
+            <!--BLOQUE TRANSACCION NO MONETARIA-->
+
+            <LinearLayout
+                android:id="@+id/linearTransactionNoMonetary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <TextView
+                    android:id="@+id/operNoMonetary"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="@string/operNoMonetary"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/view_punteado"/>
+
+                <TextView
+                    android:id="@+id/consultaSaldos"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="@string/consultaSaldos"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="75dp">
+
+                    <TextView
+                        android:id="@+id/totOperSaldo"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="@string/totOper"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotOperSaldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/black"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <TextView
+                    android:id="@+id/consultaMovimientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="@string/consultaMovimientos"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="75dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <TextView
+                        android:id="@+id/totOperMovimientos"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="@string/totOper"
+                        android:layout_marginEnd="30dp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/valTotOperMovimientos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/black"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <!--FIN BLOQUE TRANSACCION NO MONETARIA-->
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/endReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/endReportDetail"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/msgAccount"
+        layout="@layout/msg_account"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linearImprimirCombrobante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_linearlayout_white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_peekHeight="90dp"
+        tools:ignore="MissingPrefix">
+
+        <ImageButton
+            android:id="@+id/btnExpand"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_expand_black_24dp"/>
+
+        <TextView
+            android:id="@+id/msgConfirMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/flexo_medium"
+            android:text="@string/msgPrinterSettle"
+            android:textColor="@color/color_text"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnCnfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_btn_orange"
+            android:fontFamily="@font/flexo_bold"
+            android:text="Sí"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_btn_white"
+            android:fontFamily="@font/flexo_bold"
+            android:text="@string/not"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_gray"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeMsgEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/flexo_bold"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="No hay transacciones actuales"
+            android:padding="@dimen/dp_10"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

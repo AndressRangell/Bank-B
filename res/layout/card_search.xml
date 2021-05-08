@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearsearch"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fonsearch"
+            android:layout_toStartOf="@+id/relativecancel"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageButton
+                android:id="@+id/searchimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ic_baseline_search_24"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginLeft="5dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/searchimage"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:backgroundTint="@color/zxing_transparent"
+                android:fontFamily="@font/flexo_bold"
+                android:textSize="14sp"
+                android:hint="@string/busNombre"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativecancel"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/zxing_transparent"
+                android:text="@string/cancel"
+                android:fontFamily="@font/flexo_medium"
+                android:textSize="14sp"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

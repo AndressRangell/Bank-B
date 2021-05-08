@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="alphabet">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>\u00d1</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+    <string-array name="telephony">
+        <item>Amaricatel</item>
+        <item>Abmobile</item>
+        <item>Auren</item>
+        <item>Bitel</item>
+        <item>Claro</item>
+        <item>Etel</item>
+        <item>DirecTV Peru(TV Cable)</item>
+        <item>Inkatel</item>
+        <item>Imax</item>
+        <item>Movistar</item>
+        <item>MobileExpress</item>
+        <item>MaxPrime TV</item>
+        <item>\u00d1ato</item>
+        <item>\u00d1agaza</item>
+        <item>Pago Efectivo</item>
+        <item>Sedapal</item>
+        <item>Zpata</item>
+    </string-array>
+
+    <string-array name="montopendiente">
+        <item>S/ 180.00 (vence 12/04/02)</item>
+        <item>S/ 180.00 (vence 12/04/02)</item>
+        <item>S/ 180.00 (vence 12/04/02)</item>
+        <item>S/ 180.00 (vence 12/04/02)</item>
+        <item>S/ 180.00 (vence 12/04/02)</item>
+    </string-array>
+</resources>

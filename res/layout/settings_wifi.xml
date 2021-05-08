@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.bcp.tools.WifiSettings">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageButton
+                android:id="@+id/imageView7"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_regresar_24dp"
+                android:backgroundTint="@color/white"
+                android:onClick="onClickBack" />
+
+                <TextView
+                    android:id="@+id/txtToolbarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/flexo_bold"
+                    android:layout_marginRight="35dp"
+                    android:text="@string/onWifi"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <com.github.angads25.toggle.LabeledSwitch
+                    android:id="@+id/swt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:on="false"
+                    app:textOn="ON"
+                    app:textOff="OFF"
+                    app:colorOn="@color/orange"
+                    app:colorBorder="@color/white"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:id="@+id/txtRedes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/flexo_bold"
+            android:text="@string/redDispo"
+            android:textColor="@color/color_text"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"/>
+
+        <ImageView
+            android:id="@+id/imgId"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_refresh"
+            android:tint="@color/colorPrimaryDark"
+            android:onClick="actualizar"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/webViewProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_fileName="loader.json"
+        app:lottie_loop="true"
+        android:layout_marginEnd="15dp"
+        app:lottie_autoPlay="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/txtBuscandoRedes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/flexo_medium"
+        android:textColor="@color/color_text"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutSaver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:padding="0dp">
+
+        <com.android.desert.admanager.ConvenientBanner
+            android:id="@+id/adcolumn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:canLoop="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_vrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
